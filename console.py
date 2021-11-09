@@ -6,6 +6,25 @@ import repositories.album_repository as album_repository
 import os
 
 
-os.system('psql -d task_manager -f db/task_manager.sql')
+os.system('psql -d music_collection -f db/music_collection.sql')
+
+artist_1 = Artist("James Blunt")
+artist_repository.save(artist_1)
+
+artist_2 = Artist("Dido")
+artist_repository.save(artist_2)
+
+artist_3 = Artist("Amy Winehouse")
+artist_repository.save(artist_3)
+
+album_1 = Album("Back to Bedlam", "rock", artist_1)
+album_repository.save(album_1)
+
+album_2 = Album("No Angel", "rock", artist_2)
+album_repository.save(album_2)
+
+album_3 = Album("Back to Black", "rock", artist_3)
+album_repository.save(album_3)
+
 
 pdb.set_trace()
