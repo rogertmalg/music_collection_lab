@@ -26,5 +26,15 @@ album_repository.save(album_2)
 album_3 = Album("Back to Black", "rock", artist_3)
 album_repository.save(album_3)
 
+artist_albums = artist_repository.albums(artist_3)
+for album in artist_albums:
+    print(album.__dict__)
+
+find_artist = artist_repository.select(1)
+print(find_artist.__dict__)
+
+find_album = album_repository.select(1)
+print(find_album.__dict__)
+
 
 pdb.set_trace()

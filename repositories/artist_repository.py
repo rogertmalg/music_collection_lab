@@ -54,7 +54,7 @@ def albums(artist):
     result = run_sql(sql, values)
 
     for row in result:
-        album = Albums(row['title'], row['genre'], artist, row['id'])
+        album = Album(row['title'], row['genre'], artist, row['id'])
         album_list.append(album)
 
     return album_list
