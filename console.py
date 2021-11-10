@@ -36,5 +36,11 @@ print(find_artist.__dict__)
 find_album = album_repository.select(1)
 print(find_album.__dict__)
 
+# album_repository.delete(1)
+
+# artist_repository.delete(1)
+
+
+
 
 pdb.set_trace()
